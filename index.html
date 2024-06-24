@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Incidence of Cardiovascular Disease in the United States, 2009-2019</title>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin="" />
+
+  <!-- Leaflet JavaScript code -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+
+  <!-- Adding MarkerCluster plugin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/leaflet.markercluster.js"></script>
+
+  <!-- D3 Library -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+
+  <!-- Our CSS -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <!-- Disable favicon requests-->
+  <link rel="icon" href="data:,">
+</head>
+
+<body>
+  <div id="controls">
+    <!-- Dropdown menu for selecting year -->
+    <label for="yearSelect">Select Year:</label>
+    <select id="yearSelect">
+      <option value="1999">1999</option>
+      <option value="2000">2000</option>
+      <option value="2001">2001</option>
+      <option value="2002">2002</option>
+      <option value="2003">2003</option>
+      <option value="2004">2004</option>
+      <option value="2005">2005</option>
+      <option value="2006">2006</option>
+      <option value="2007">2007</option>
+      <option value="2008">2008</option>
+      <option value="2009">2009</option>
+      <option value="2010">2010</option>
+      <option value="2011">2011</option>
+      <option value="2012">2012</option>
+      <option value="2013">2013</option>
+      <option value="2014">2014</option>
+      <option value="2015">2015</option>
+      <option value="2016">2016</option>
+      <option value="2017">2017</option>
+      <option value="2018">2018</option>
+      <option value="2019">2019</option>
+    </select>
+
+    <!-- Dropdown menu for selecting Cardiovascular Disease Type -->
+    <label for="diseaseTypeSelect">Select Cardiovascular Disease Type:</label>
+    <select id="diseaseTypeSelect">
+      <option value="Cardiovascular disease (CVD)">Cardiovascular disease (CVD)</option>
+      <option value="All stroke">All stroke</option>
+      <option value="All heart disease">All heart disease</option>
+      <option value="Heart failure">Heart failure</option>
+      <option value="Coronary heart disease (CHD)">Coronary heart disease (CHD)</option>
+    </select>
+
+    <!-- Dropdown menu for selecting Ethnicity -->
+    <label for="ethnicitySelect">Select Ethnicity:</label>
+    <select id="ethnicitySelect">
+      <option value="American Indian/Alaska Native">American Indian/Alaska Native</option>
+      <option value="Asian/Pacific Islander">Asian/Pacific Islander</option>
+      <option value="Black (Non-Hispanic)">Black (Non-Hispanic)</option>
+      <option value="Hispanic">Hispanic</option>
+      <option value="White">White</option>
+      <option value="Overall">Overall</option>
+    </select>
+  </div>
+
+  <!-- The div where we'll insert our map -->
+  <div id="map" style="height: 600px;"></div>
+
+  <!-- JavaScript file -->
+  <script type="text/javascript" src="logic.js"></script>
+</body>
+
+</html>
